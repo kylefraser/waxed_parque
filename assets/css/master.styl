@@ -1,0 +1,712 @@
+@import '_settings'
+@import '_plangular'
+
+normalize-css()
+base()
+
+@font-face
+  font-family: 'cooper'
+  src: url('fonts/CooperHewitt-Medium.eot')
+
+html
+  height: 100%
+
+body
+  min-height: 100%
+  background: white
+
+p
+  line-height: 1.5
+  font-family: 'cooper', sans-serif
+
+h1
+  font-family: 'Oswald', sans-serif
+  font-size: 700
+  font-size: 2.675em
+
+h2, h3, h4, h5, h6
+  font-family: 'Montserrat', sans-serif
+
+h2
+  font-size: 1.5em
+
+h6
+  font-size: 0.75em
+
+a
+  color: black
+  text-decoration: none
+
+a:hover
+  color: cherry
+
+a:hover h1
+  color: cherry
+
+*:focus
+  outline: none
+
+.main-container
+  width: 97%
+  margin: 1.5%
+  height: auto
+  border: 1px solid #999
+
+.logo-container
+  width: 300px
+  height: 300px
+  position: absolute
+  margin-left: 50px
+  z-index: 5
+
+.logo
+  object-fit: cover
+  width: 100%
+  height: 100%
+  filter: brightness(200%)
+
+.header-container
+  width: 100%
+  height: 90vh
+  float: left
+  position: relative
+  overflow: hidden
+  background: radial-gradient(ellipse at center, #3c392e 0%,#000000 60%)
+
+.header-image
+  width: 100%
+  min-width: 100%
+  height: 100%
+  position: absolute
+  opacity: .30
+  object-fit: cover
+
+.header-text-container
+  width: 65%
+  position: absolute
+  left: 50px
+  height: 120px
+  bottom: 120px
+
+.header-header-text
+  color: white
+  font-weight: 400
+  color: white
+  border-top: 3px solid #c8a62f
+  padding-top: 10px
+
+.header-sub-header-text
+  font-weight: 400
+  color: white
+  max-width: 600px
+
+.slider-container
+  height: 90vh
+
+.slide
+  height: 90vh
+
+.slider-nav-container
+  width: 50px
+  height: 100%
+  position: absolute
+  right: 50px
+  top: 30vh
+
+.slider-nav-list
+  list-style: none
+
+.slider-nav-item
+  color: #c8a62f
+  font-size: .85em
+  font-family: 'Cooper', sans-serif
+  padding: 15px 0
+  border-bottom: 1px solid gold
+  width: 20px
+  text-align: center
+
+  a
+    color: gold
+
+  a:hover
+    color: cherry
+
+.slider-nav-item:last-of-type
+  border: none
+
+.nav-container
+  width: 70%
+  margin: 0 15%
+  display: flex
+  flex-direction: row
+  height: 50px
+  position: relative
+  float: left
+  justify-content: center
+
+.nav-item
+  margin: 0 30px
+  height: 50px
+  text-align: left
+  list-style: none
+  display: inline-block
+
+  h2
+
+    font-weight: 900
+    text-transform: uppercase
+    font-size: 14px
+    letter-spacing: 1px
+
+.article-row
+  width: 80%
+  display: flex
+  justify-content: space-around
+  flex-direction: row
+  margin-top: 20px
+  float: left
+  padding: 0 10%
+  flex-wrap: wrap
+  background: white
+
+hr
+  color: black
+  height: 2
+  width: 80%
+  margin: 20px 10%
+  float: left
+
+.article-row-item
+  width: 30%
+  overflow: hidden
+  background: #000
+  margin-bottom: 40px
+  background: white
+
+.article-row-image-container
+  min-width: 100%
+  height: 260px
+  float: left
+  position: relative
+
+.article-row-image-container:hover .article-row-image
+  transform: scale(1.2)
+
+.article-row-image
+  object-fit: cover
+  width: 100%
+  height: 290px
+  transition: all ease 1s
+
+.article-row-text-container
+  width: 100%
+  height: 240px
+  background: white
+  float: left
+  position: relative
+  overflow: hidden
+
+.article-row-category
+  font-weight: 700
+  text-transform: uppercase
+  margin: 5px 0
+  padding: 0 0 2px 0
+  border-bottom: 2px solid #c8a62f
+  display: inline-block
+  position: relative
+  top: 0
+
+.article-row-header
+  margin: 0
+  padding: 5px 0
+
+.article-row-paragraph
+  margin: 0 0 5px
+  padding: 0
+  overflow: hidden
+  text-overflow: ellipsis
+  height: 120px
+  display: block
+
+.article-row-date-time
+  font-weight: 300
+  color: cherry
+  position: absolute
+  bottom: 0
+  margin: 10px 0 0
+  background: white
+  width: 100%
+
+.article-large-container
+  width: 90%
+  height: 320px
+  float: left
+  margin: 50px 5%
+  overflow: hidden
+  background: #f8f8f8
+
+.article-large-image-container
+  width: 60%
+  height: 320px
+  float: left
+  overflow: hidden
+
+.article-large-image
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.article-large-text-container
+  width: 30%
+  height: 315px
+  float: left
+  padding: 0 5%
+  position: relative
+  background: #f8f8f8
+
+.article-large-left-text-container:before
+  content: ''
+  line-height: 0
+  font-size: 0
+  width: 0
+  height: 0
+  border-top: 80px solid transparent
+  border-bottom: 340px solid #f8f8f8
+  border-left: 80px solid transparent
+  border-right: 0px solid #000
+  position: absolute
+  top: -80px
+  left: -80px
+
+.article-large-right-text-container:after
+  content: ''
+  line-height: 0
+  font-size: 0
+  width: 0
+  height: 0
+  border-top: 80px solid transparent
+  border-bottom: 340px solid #f8f8f8
+  border-left: 0px solid #000
+  border-right: 80px solid transparent
+  position: absolute
+  top: -80px
+  right: -80px
+
+.right
+  float: right
+
+.article-large-paragraph
+  margin: 0 0 5px
+  padding: 0
+  overflow: hidden
+  text-overflow: ellipsis
+  height: 120px
+  display: block
+
+.article-large-date-time
+  font-weight: 300
+  color: cherry
+  position: absolute
+  bottom: 0
+  margin: 10px 0 0
+  width: 100%
+
+.readmore
+  width: 100px
+  height: 10px
+  border: 3px solid #c8a62f
+  padding: 5px 10px 13px
+  margin: 20px auto
+  position: relative
+  bottom: 0
+  background: #ffffff
+
+.readmore-text
+  padding: 0
+  margin: 0
+  text-align: center
+  text-transform: uppercase
+  font-size: .85em
+  font-weight: 700
+  color: gold
+
+.readmore:hover
+  border-color: cherry
+
+.readmore:hover .readmore-text
+  color: cherry
+
+//
+//
+//
+// MUSIC CONTAINER
+//
+//
+//
+
+.music-container
+  width: 100%
+  height: 560px
+  margin: 50px 0 0
+  background: black
+  overflow: hidden
+  position: relative
+  float: left
+
+.music-container video
+  width: 1600px
+  position: absolute
+  top: -30%
+
+.more-music-container
+  width: 100%
+  height: auto
+  background: black
+  margin: 0 0 90px
+  float: left
+
+.more-music-card
+  width: 100%
+  height: 420px
+  overflow: hidden
+  background: black
+  position: relative
+
+.mobile-music-card
+  display: none
+
+.more-music-card-image
+  opacity: .4
+  position: absolute
+  width: 100%
+  object-fit: cover
+  height: 100%
+  // top: 50%
+  // left: 50%
+  // margin-right: -50%
+  // transform: translate(-50%, -50%)
+  // min-height: 100%
+
+.more-music-card:hover .more-music-card-image
+	opacity: .7
+
+.music-card-artist
+	color: white
+	text-align: center
+	font-size: 1em
+	font-variant: small-caps
+	position: relative
+	font-weight: 400
+
+.music-card-title
+	color: white
+	text-align: center
+	font-size: 1.5em
+	margin: -20px 10% 20px 10%
+	font-variant: small-caps
+	position: relative
+	font-weight: 700
+	width: 80%
+
+.music-card-circle
+	border-radius: 50%
+	border: 4px solid white
+	margin: 0px auto 30px auto
+	width: 100px
+	height: 100px
+
+.more-music-link-container
+	height: 50px
+	background: portlandorange
+
+.more-music-link-container:hover
+	background: #222
+
+.more-music-link-container:hover h1
+	color: darkblaze
+
+.more-music-link
+	text-transform: uppercase
+	font-size: 1.5em
+	text-align: center
+	margin: 0
+	padding-top: 10px
+	color: white
+	font-weight: 400
+
+.bandcamp-player
+	opacity: .4
+
+.bandcamp-player:hover
+	opacity: .7
+
+.soundcloud-icon-large
+	position: absolute
+	top: -80px
+	right: 20px
+	z-index: 2
+
+.soundcloud-icon-small
+	position: absolute
+	top: 15px
+	right: 20px
+	z-index: 2
+
+.burntfm-container
+	width: 40%
+	height: 200px
+	padding-top: 120px
+	background: linear-gradient(to bottom, #E87600, #FF5A36 90%)
+	float: left
+
+.music-square
+	height: 320px
+
+//
+//
+//
+// SPOTLIGHT
+//
+//
+//
+
+.spotlight-container
+  width: 100%
+  height: 80vh
+  float: left
+  background: linear-gradient(to right, #f8f8f8 50%,#aaaaaa 100%)
+  display: flex
+  justify-content: space-around
+  margin: 50px 0
+  position: relative
+
+.spotlight-image
+  width: 100%
+  object-fit: cover
+  margin-left: -300px
+
+.spotlight-text-container
+  width: 32%
+  height: 80vh
+  top: 30%
+  right: 80px
+  position: absolute
+
+.spotlight-header-text
+  color: black
+  border-top: 3px solid #c8a62f
+  padding-top: 10px
+
+.spotlight-sub-header-text
+  font-weight: 400
+  color: black
+  max-width: 500px
+
+//
+//
+//
+// FOOTER
+//
+//
+//
+
+.footer-container
+  width: 100%
+  height: 440px
+  background: #111111
+  float: left
+  position: relative
+  margin-top: 100px
+
+.footer-logo-container
+  width: 60%
+  margin: 0 20%
+  height: 440px
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  display: flex
+  justify-content: center
+  align-items: center
+
+.footer-logo
+  margin: 0 auto
+  display: block
+  width: 400px
+  height: 400px
+  filter: brightness(200%)
+
+@media only screen and (max-width : 1234px)
+  h1
+    font-size: 2.25em
+
+@media only screen and (max-width : 1115px)
+  .article-row-item
+    width: 45%
+
+  .music-container
+  	height: 460px
+
+  .more-music-card
+    height: 320px
+
+  .mobile-music-card
+    display: block
+
+  .music-container
+    display: none
+
+  h2
+    font-size: 1.25em
+
+  h3
+    font-size: 1em
+
+  .article-row
+    width: 94%
+    padding: 0 3%
+
+  .article-large-container
+    width: 98%
+    margin: 50px 1%
+
+  .spotlight-container
+    margin: 50px 0px 100px
+
+  .spotlight-text-container
+    right: 40px
+    width: 35%
+
+  .more-music-card-container
+    width: 33.3333%
+
+@media only screen and (max-width : 1000px)
+  .nav-container
+    display: none
+
+@media only screen and (max-width : 900px)
+  .nav-container
+    display: none
+
+  .header-text-container
+    bottom: 150px
+
+  .header-header-text
+    font-size: 1.85em
+
+  .spotlight-container
+    background: #111111
+
+  .spotlight-image
+    margin-left: 0
+    opacity: .4
+
+  .spotlight-text-container
+    width: 70%
+    top: 50%
+    right: 15%
+
+  .spotlight-header-text
+    color: white
+
+  .spotlight-sub-header-text
+    color: white
+
+@media only screen and (min-device-width : 320px) and (max-width : 550px)
+  .nav-container
+    display: none
+
+  .header-header-text
+    font-size: 1em
+
+  .header-sub-header-text
+    font-size: .75em
+
+  .main-container
+    width: 100%
+    margin: 0
+    height: auto
+    border: 0px
+
+  .header-container
+    height: 100vh
+
+  .slider-container
+    height: 100vh
+
+  .slide
+    height: 100vh
+
+  .logo-container
+    width: 100%
+    height: 300px
+    display: flex
+    margin: 0
+
+  .logo
+    object-fit: cover
+    width: 300px
+    height: 300px
+    margin: 0 auto
+
+  .header-text-container
+    width: 80%
+    left: 10%
+    bottom: 20px
+
+  .article-row-item
+    width: 90%
+
+  .article-row-image-container
+    height: 220px
+
+  .article-row-text-container
+    height: 110px
+
+  .article-row-paragraph
+    display: none
+
+  .article-large-container
+    height: auto
+    width: 90%
+    margin: 30px 5%
+
+  .article-large-image-container
+    width: 100%
+
+  .article-large-text-container
+    width: 90%
+
+  .spotlight-container
+    margin: 30px 0 60px 0
+    position: relative
+
+  .spotlight-image
+    position: relative
+
+  .spotlight-text-container
+    top: 40%
+    position: absolute
+
+  .spotlight-header-text
+    font-size: 1.5em
+
+  .more-music-card-container
+    width: 50%
+
+  .more-music-card
+    height: 280px
+
+  .music-card-circle
+    width: 40px
+    height: 40px
+    border: 2px solid white
+    padding: 6px 8px
+
+  .footer-logo
+    margin: 0 auto
+    display: block
+    width: 200px
+    height: 200px
